@@ -1,0 +1,45 @@
+QUICK REFERENCE: Supabase Setup Steps
+=====================================
+
+1. VISIT: https://supabase.com
+   Click "Start your project"
+
+2. SIGN UP: 
+   - Use GitHub (easiest) or Email
+   - Verify email if needed
+
+3. CREATE PROJECT:
+   - Click "New Project"
+   - Name: delightstore
+   - Password: Create STRONG password (kChRVFGTVVwgILVG)
+   - Region: Singapore or closest
+   - Plan: Free
+   - Click "Create new project"
+   - Wait 2-3 minutes
+
+4. GET CONNECTION STRING:
+   - Click "Project Settings" (gear icon)
+   - Click "Database"
+   - Scroll to "Connection string"
+   - Click "URI" tab
+   - Copy the connection string
+   - Replace [YOUR-PASSWORD] with your actual password
+
+5. UPDATE .env FILE:
+   - Run: .\update-database-url.ps1
+   - OR manually edit .env file
+   - Replace DATABASE_URL line with your Supabase connection string
+
+6. RUN SETUP COMMANDS:
+   npm run db:push    # Creates tables
+   npm run db:seed    # Adds 47 products
+
+7. VERIFY:
+   - Check Supabase Dashboard → Table Editor
+   - Should see Product, Category, User tables
+
+8. START WEBSITE:
+   npm run dev
+   Open: http://localhost:3000
+
+DONE! ✅
